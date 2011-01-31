@@ -1,0 +1,23 @@
+h1. GeoConvert
+
+h2. A Module to convert coordinates
+
+This is very much a work in progress. The LatLong -> UTM conversion is not working at all.
+
+h3. Background
+
+h3. Source
+
+The calculations in this module are taken entirely from the Geographic/UTM Coordinate Converter page by Chuck Taylor: http://home.hiwaay.net/~taylorc/toolbox/geography/geoutm.html Any errors in the calculations are mine.
+
+h2. Usage
+
+
+require 'geo_convert'
+
+easting = 717443
+northing = 6.39756e+06
+zone = 50
+southern_hemisphere = true
+
+GeoConvert.utm_easting_northing_to_latlong(easting, northing, zone, southern_hemisphere)
